@@ -1,0 +1,13 @@
+name: Error
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  throw-error:
+    runs-on: ubuntu-latest
+    steps:
+      - name: This step will fail
+        run: |
+          exit 1
